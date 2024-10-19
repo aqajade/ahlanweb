@@ -3,7 +3,8 @@ import dbconnect from "@/lib/testconnect";
 import { NextResponse } from "next/server";
 
 export async function GET() {
-  await dbconnect(); //mastiin db aman sblm request
+  // dibawah ini matiin koneksi sementara
+  // await dbconnect(); //mastiin db aman sblm request
   try {
     const contohs = await Contoh.find({});
     return NextResponse.json(contohs);
