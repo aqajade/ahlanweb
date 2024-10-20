@@ -1,6 +1,7 @@
 export default async function Page() {
   const fetchContohs = async () => {
-    const res = await fetch("/api/contohs");
+    // const res = await fetch("/api/contohs"); ini gaberes:
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/contohs`);
     console.log("Response:", res); // Log the response
 
     if (!res.ok) {
@@ -37,11 +38,6 @@ export default async function Page() {
   );
 }
 
-
-
-
-
-
 // export default async function Page() {
 //   const fetchContohs = async () => {
 //     const res = await fetch("/api/contohs");
@@ -74,10 +70,7 @@ export default async function Page() {
 //       ))}
 //     </div>
 //   );
-// } 
-
-
-
+// }
 
 // export default async function page() {
 //   const fetchContohs = async () => {
